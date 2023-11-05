@@ -17,4 +17,9 @@ conda init bash
 # Install the Python packages from requirements.txt
 pip install -r requirements.txt
 pip install git+https://github.com/paul-gauthier/aider.git
+
+# Install ollama
+curl https://ollama.ai/install.sh | sh
+
+
 echo "✅ Setup completed. You can now use the environment!"
