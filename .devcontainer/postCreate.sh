@@ -1,6 +1,17 @@
 #!/bin/sh
 echo "🚧 Setting up your environment. Please wait..."
 
+# Define the export command
+export_command='export OLLAMA_HOST=http://host.docker.internal:11434'
+
+# Append the export command to .bashrc and .zshrc for the root user
+
+chmod +x ~/.bashrc
+chmod +x /.zshrc
+echo "$export_command" >> ~/.bashrc
+echo "$export_command" >> ~/.zshrc
+
+
 # Create the conda environment
 conda create -n docsFirst -y
 
